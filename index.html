@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Random Timetable Generator</h1>
+    <form id="input-form">
+      <label for="days">Number of Days:</label>
+      <input type="number" id="days" min="1" max="7" required>
+
+      <label for="hoursPerDay">Slots per Day:</label>
+      <input type="number" id="hoursPerDay" min="1" required>
+
+      <div id="subjects-container">
+        <h2>Subjects</h2>
+        <div class="subject-input">
+          <input type="text" placeholder="Subject Name" class="subject-name" required>
+          <input type="number" placeholder="Weekly Hours" class="subject-hours" min="1" required>
+          <label>
+            Lab?
+            <input type="checkbox" class="subject-lab">
+          </label>
+        </div>
+      </div>
+      <button type="button" id="add-subject">Add Subject</button>
+
+      <button type="submit">Generate Timetable</button>
+    </form>
+    <div id="timetable-container"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
